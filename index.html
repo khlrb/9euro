@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Das 9€-Ticket-Spiel</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    var lines = [];
+    fetch('./lines.json').then(response => { return response.json(); }).then(data => lines = data);
+    var stops = [];
+    fetch('./stops.json').then(response => { return response.json(); }).then(data => stops = data);
+    var station = {};
+
+    function init() {
+      for (const stop of stops) {
+        station[stop['name']] = L.circle([stop['lat'],stop['lon']], { color: 'grey', fillColor: '#f03', fillOpacity: 0.5, radius: 500}).addTo(map);
+        station[stop['name']].on("click", function (e) {document.getElementById('start').value = stop['name']; });
+        document.getElementById("start").innerHTML += "<option value='" + stop['name'] + "'>" + stop['name'] + "</option>";
+      }
+    }
+
+    function connectingTrains(stationName) {
+      return lines.map((l,index) => l["stops"].includes(stationName) ? index : -1 ).filter(i => i>-1)
+    }
+
+    function travel(stationName,trainLine,distance) {
+      var line = lines[trainLine]["stops"];
+      var i = line.findIndex(s => s === stationName);
+      if (i == -1) {
+        console.error(stationName, " not on line #", trainLine);
+      }
+      else {
+        if ((i + distance) < 0) {
+          return line[0];
+        }
+        else if ((i + distance) >= line.length) {
+          return line[line.length -1];
+        }
+        else {
+          return line[i+distance];
+        }
+      }
+    }
+
+    function play(startPos,d,steps) {
+      var pos = startPos;
+      var route = new Array(pos);
+      for (let i = 0; i < steps; i++) {
+        var connections = connectingTrains(pos);
+        var choice = connections[Math.floor(Math.random() * connections.length)];
+        var dist = Math.random() < 0.5 ? -1.0 : 1.0;
+        if (lines[choice]["stops"][0] == pos) {
+          dist = 1.0;
+        }
+        else if(lines[choice]["stops"][lines[choice]["stops"].length-1] == pos) {
+          dist = -1.0;
+        }
+        if (d === "d2") {
+          dist *= Math.floor(1+Math.random()*2);
+        }
+        if (d === "d4") {
+          dist *= Math.floor(1+Math.random()*4);
+        }
+        if (d === "d6") {
+          dist *= Math.floor(1+Math.random()*6);
+        }
+        pos = travel(pos,choice,dist);
+        route.push(pos);
+      }
+      return route;
+    }
+
+    function simulation() {
+      var startPos = document.getElementById("start").value;
+      var d = document.getElementById("d").value;
+      var steps = document.getElementById("n").value;
+      var results = {};
+      for (let i = 0; i < 1000; i++) {
+        var r = play(startPos,d,steps);
+        if (results[r[r.length-1]] == undefined) {
+          results[r[r.length-1]] = 1.0;
+        }
+        else {
+          results[r[r.length-1]] += 1.0;
+        }
+      }
+      return Object.entries(results).sort(([,a],[,b]) => b-a);
+    }
+
+    function runSimulation() {
+      var res = simulation();
+      document.getElementById("result").innerHTML = res;
+      for (const s of Object.entries(station)) {
+        s[1].setRadius(500);
+      }
+      for (const r of res) {
+        station[r[0]].setRadius(500+Math.log(r[1])*1000);
+      }
+    }
+
+    window.onload = init;  
+  </script>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    const map = L.map('map', { zoomControl: false }).setView([54.323695, 9.788545], 8);
+    const tiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20
+      });
+    map.addLayer(tiles);
+  </script>
+<div id="simulation">
+  <h1>Das 9€-Ticket-Spiel - eine lustige WG-Aktivität</h1>
+  <h2><i>oder</i>: Meditation über den zentralen Grenzwertsatz</h2>
+  <fieldset>
+    <legend>Regeln</legend>
+    Beginne in <select id="start" name="start"></select>.<br/>
+    Wähle zufällige Verbindung und reise mit 
+    <select name="d" id="d">
+      <option value="d2">d2</option>
+      <option value="d4">d4</option>
+      <option value="d6">d6</option>
+    </select> gewürfelte Anzahl Stationen.<br/>
+    Schritte: <input name="n" id="n" type="number" value="10"/><br/>
+    <button value="los" onclick="runSimulation();">Los!</button>
+  </fieldset>
+  <fieldset>
+    <legend>Ergebnisse</legend>
+    <textarea id="result"></textarea>
+  </fieldset>
+</div>
+</body>
+</html>
