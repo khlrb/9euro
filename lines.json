@@ -1,0 +1,420 @@
+[
+   {
+      "name":"RE 6",
+      "stops":[
+         "Westerland",
+         "Keitum",
+         "Morsum",
+         "Klanxbüll",
+         "Niebüll",
+         "Langenhorn",
+         "Bredstedt",
+         "Husum",
+         "Friedrichstadt",
+         "Lunden",
+         "Heide",
+         "Itzehoe",
+         "Elmshorn"
+      ]
+   },
+   {
+      "name":"RB 61",
+      "stops":[
+         "Itzehoe",
+         "Kremperheide",
+         "Krempe",
+         "Glückstadt",
+         "Herzhorn",
+         "Elmshorn",
+         "Tornesch",
+         "Prisdorf",
+         "Pinneberg"
+      ]
+   },
+   {
+      "name":"RB 62",
+      "stops":[
+         "Heide",
+         "Meldorf",
+         "St. Michaelisdonn",
+         "Burg (Dithm.)",
+         "Wilster",
+         "Itzehoe"
+      ]
+   },
+   {
+      "name":"RB 63",
+      "stops":[
+         "Büsum",
+         "Reinsbüttel",
+         "Süderdeich",
+         "Wesselburen",
+         "Jarrenwisch",
+         "Tiebensee",
+         "Heide",
+         "Nordhastedt",
+         "Albersdorf",
+         "Beldorf",
+         "Hademarschen",
+         "Gokels",
+         "Beringstedt",
+         "Osterstedt",
+         "Hohenwestedt",
+         "Aukrug",
+         "Wasbek",
+         "Neumünster Stadtwald",
+         "Neumünster"
+      ]
+   },
+   {
+      "name":"RB 64",
+      "stops":[
+         "Bad St. Peter-Ording",
+         "Bad St. Peter Süd",
+         "Tating",
+         "Sandwehle",
+         "Garding",
+         "Katharinenheerd",
+         "Kating",
+         "Tönning",
+         "Harblek",
+         "Witzwort",
+         "Husum"
+      ]
+   },
+   {
+      "name":"RB 65",
+      "stops":[
+         "Niebüll",
+         "Niebüll NEG",
+         "Deezbüll",
+         "Maasbüll",
+         "Dagebüll Kirche",
+         "Dagebüll Mole"
+      ]
+   },
+   {
+      "name":"RB 66",
+      "stops":[
+         "Süderlügum",
+         "Uphusum",
+         "Niebüll"
+      ]
+   },
+   {
+      "name":"RE 7",
+      "stops":[
+         "Flensburg",
+         "Tarp",
+         "Jübek",
+         "Schleswig",
+         "Owschlag",
+         "Rendsburg",
+         "Nortorf",
+         "Neumünster",
+         "Elmshorn"
+      ]
+   },
+   {
+      "name":"RE 7",
+      "stops":[
+         "Kiel Hbf",
+         "Flintbek",
+         "Bordesholm",
+         "Einfeld",
+         "Neumünster",
+         "Elmshorn"
+      ]
+   },
+   {
+      "name":"RE 70",
+      "stops":[
+         "Kiel Hbf",
+         "Bordesholm",
+         "Neumünster",
+         "Brokstedt",
+         "Wrist",
+         "Elmshorn"
+      ]
+   },
+   {
+      "name":"RB 71",
+      "stops":[
+         "Wrist",
+         "Dauenhof",
+         "Horst",
+         "Elmshorn",
+         "Tornesch",
+         "Prisdorf",
+         "Pinneberg"
+      ]
+   },
+   {
+      "name":"RB 71",
+      "stops":[
+         "Itzehoe",
+         "Kremperheide",
+         "Krempe",
+         "Glückstadt",
+         "Herzhorn",
+         "Elmshorn"
+      ]
+   },
+   {
+      "name":"RE 72",
+      "stops":[
+         "Flensburg",
+         "Husby",
+         "Sörup",
+         "Süderbrarup",
+         "Rieseby",
+         "Eckernförde",
+         "Gettorf",
+         "Suchsdorf",
+         "Kiel Hbf"
+      ]
+   },
+   {
+      "name":"RB 73",
+      "stops":[
+         "Eckernförde",
+         "Gettorf",
+         "Suchsdorf",
+         "Kronshagen",
+         "Kiel-Hassee CITTI-PARK",
+         "Kiel Hbf"
+      ]
+   },
+   {
+      "name":"RE 74",
+      "stops":[
+         "Husum",
+         "Jübek",
+         "Schleswig",
+         "Owschlag",
+         "Rendsburg",
+         "Felde",
+         "Kiel Hbf"
+      ]
+   },
+   {
+      "name":"RB 75",
+      "stops":[
+         "Rendsburg",
+         "Schülldorf",
+         "Bredenbek",
+         "Felde",
+         "Achterwehr",
+         "Melsdorf",
+         "Kiel-Russee",
+         "Kiel-Hassee CITTI-PARK"
+      ]
+   },
+   {
+      "name":"RB 76",
+      "stops":[
+         "Kiel Hbf",
+         "Kiel Schulen am Langsee",
+         "Kiel Ellerbek",
+         "Kiel Oppendorf"
+      ]
+   },
+   {
+      "name":"RE 8",
+      "stops":[
+         "Lübeck Hbf",
+         "Reinfeld",
+         "Bad Oldesloe"
+      ]
+   },
+   {
+      "name":"RE 80",
+      "stops":[
+         "Lübeck Hbf",
+         "Reinfeld",
+         "Bad Oldesloe",
+         "Ahrensburg"
+      ]
+   },
+   {
+      "name":"RB 81",
+      "stops":[
+         "Bad Oldesloe",
+         "Kupfermühle",
+         "Bargteheide",
+         "Ahrensburg-Gartenholz",
+         "Ahrensburg"
+      ]
+   },
+   {
+      "name":"RB 82",
+      "stops":[
+         "Neumünster",
+         "Neumünster Süd",
+         "Rickling",
+         "Wahlstedt",
+         "Fahrenkrug",
+         "Bad Segeberg",
+         "Altengörs",
+         "Wakendorf",
+         "Fresenburg",
+         "Bad Oldesloe"
+      ]
+   },
+   {
+      "name":"RE 83",
+      "stops":[
+         "Kiel Hbf",
+         "Raisdorf",
+         "Preetz",
+         "Plön",
+         "Bad Malente-Gremsmühlen",
+         "Eutin",
+         "Bad Schwartau",
+         "Lübeck Hbf",
+         "Lübeck Hochschulstadtteil",
+         "Lübeck Flughafen",
+         "Ratzeburg",
+         "Mölln",
+         "Büchen",
+         "Lauenburg"
+      ]
+   },
+   {
+      "name":"RB 84",
+      "stops":[
+         "Kiel Hbf",
+         "Kiel-Elmschenhagen",
+         "Raisdorf",
+         "Preetz",
+         "Ascheberg",
+         "Plön",
+         "Bad Malente-Gremsmühlen",
+         "Eutin",
+         "Pönitz",
+         "Pansdorf",
+         "Bad Schwartau",
+         "Lübeck Hbf"
+      ]
+   },
+   {
+      "name":"RB 85",
+      "stops":[
+         "Puttgarden",
+         "Fehmarn-Burg",
+         "Großenbrode",
+         "Oldenburg",
+         "Lensahn",
+         "Neustadt",
+         "Sierksdorf",
+         "Haffkrug",
+         "Scharbeutz",
+         "Timmendorfer Strand",
+         "Bad Schwartau",
+         "Lübeck Hbf"
+      ]
+   },
+   {
+      "name":"RB 86",
+      "stops":[
+         "Lübeck-Travemünde Strand",
+         "Lübeck-Travemünde Hafen",
+         "Lübeck-Travemünde Skandinavienkai",
+         "Lübeck-Kücknitz",
+         "Lübeck-Dänischburg IKEA",
+         "Lübeck Hbf"
+      ]
+   },
+   {
+      "name":"RE 4",
+      "stops":[
+         "Lübeck Hbf",
+         "Lübeck-St. Jürgen"
+      ]
+   },
+   {
+      "name":"RE 1",
+      "stops":[
+         "Schwarzenbek",
+         "Müssen",
+         "Büchen"
+      ]
+   },
+   {
+      "name":"A 1",
+      "stops":[
+         "Neumünster",
+         "Neumünster Süd",
+         "Boostedt",
+         "Großenaspe",
+         "Wiemersdorf",
+         "Bad Bramstedt",
+         "Bad Bramstedt Kurhaus",
+         "Lentföhrden",
+         "Nützen",
+         "dodenhof",
+         "Holstentherme",
+         "Kaltenkirchen",
+         "Kaltenkirchen Süd",
+         "Henstedt-Ulzburg",
+         "Ulzburg Süd",
+         "Tanneneck",
+         "Ellerau",
+         "Quickborn",
+         "Quickborn Süd",
+         "Hasloh",
+         "Bönningstedt"
+      ]
+   },
+   {
+      "name":"A 2",
+      "stops":[
+         "Ulzburg Süd",
+         "Meeschensee",
+         "Haslohfurth",
+         "Quickborner Str.",
+         "Friedrichsgabe",
+         "Moorbekhalle",
+         "Norderstedt Mitte"
+      ]
+   },
+   {
+      "name":"A 3",
+      "stops":[
+         "Elmshorn",
+         "Langenmoor",
+         "Sparrieshoop",
+         "Bokholt",
+         "Voßloch",
+         "Barmstedt Brunnenstr.",
+         "Barmstedt",
+         "Langeln",
+         "Alveslohe",
+         "Henstedt-Ulzburg",
+         "Ulzburg Süd"
+      ]
+   },
+   {
+      "name":"S 1",
+      "stops":[
+         "Wedel"
+      ]
+   },
+   {
+      "name":"S 21",
+      "stops":[
+         "Reinbek",
+         "Wohltorf",
+         "Aumühle"
+      ]
+   },
+   {
+      "name":"S 3",
+      "stops":[
+         "Pinneberg",
+         "Thesdorf",
+         "Halstenbek",
+         "Krupunder"
+      ]
+   }
+]
